@@ -1,0 +1,77 @@
+/* Formular */
+
+@font-face {
+    font-family: 'Formular-900';
+    src: url('fonts/formular-black-trial.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formular-700';
+    src: url('fonts/formular-bold-trial.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formular-500';
+    src: url('fonts/formular-medium-trial.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formular-400';
+    src: url('fonts/formular-regular-trial.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formular-300';
+    src: url('fonts/formular-light-trial.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Formular-200';
+    src: url('fonts/formular-extralight-trial.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* NeueMachina */
+
+@font-face {
+    font-family: 'NeueMachina-800';
+    src: url('fonts/PPNeueMachina-Ultrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-500';
+    src: url('fonts/PPNeueMachina-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-300';
+    src: url('fonts/PPNeueMachina-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* Cygnito */
+
+@font-face {
+    font-family: 'Cygnito';
+    src: url('fonts/cygnito-mono.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
