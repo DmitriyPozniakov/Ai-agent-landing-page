@@ -34,7 +34,21 @@ button {
     background: transparent;
     outline: none;
     cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+button:hover {
+    background-color: var(--base-blue-color);
+    color: #fff;
+}
+
+button:active {
+    background-color: var(--base-blue-color);
+    color: #fff;
+    transform: scale(0.95); 
+    transition: transform 0.1s ease; 
+}
+
 
 input {
     border: none;

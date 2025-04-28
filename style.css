@@ -10,6 +10,17 @@ li {
     font-size: 1.2rem;
 }
 
+.nav-item {
+    transition: font-weight 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+    font-family: 'Formular-700'; 
+}
+
 header {
     background: #E7E8ED;
     /* height: 90rem; */
@@ -383,12 +394,28 @@ nav {
     padding: 60px 30px;
 }
 
+.integration-section {
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
 .apps-container {
     display: flex;
     align-items: center;
     gap: 15px;
-    overflow-x: scroll;
+    animation: scroll 7s linear infinite;
+    width: auto; 
 }
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-120px * 5 - 15px * 5)); /* Прокрутка на всю ширину всех элементов + gap между ними */
+    }
+  }
 
 .apps-container::-webkit-scrollbar {
     width: 0px;
@@ -719,3 +746,4 @@ footer::before {
 .social-medias button {
     font-size: 2rem;
 }
+
