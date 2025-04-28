@@ -1,129 +1,55 @@
 /* RESPONSIVE RESPONSIVE RESPONSIVE */
 /* Мобильные устройства (маленькие) */
+@media (min-width: 240px) and (max-width: 480px) {
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-title {
+        text-align: center;
+    }
+
+    .customer-info-footer {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start ;
+    }
+
+    .legal-container {
+        align-items: flex-start !important;
+    }
+}
+
 @media (max-width: 480px) {
 
-    /* manufactiring */
-    .floating-text:nth-of-type(1) {
+    .hero-title::before {
+        content: "";
         position: absolute;
-        top: 28%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        width: 60px;
+        height: 60px;
+        background-image: url('images/Union.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: -60px;
+        left: 0px;
+        z-index: 100;
     }
 
-    /* media */
-    .floating-text:nth-of-type(2) {
+    .hero-title::after {
+        content: "";
         position: absolute;
-        top: 7%;
-        left: 5%;
-        text-align: center;
+        width: 70px;
+        height: 70px;
+        background-image: url('images/Union.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 40px;
+        z-index: 100;
     }
 
-    /* logistic */
-    .floating-text:nth-of-type(3) {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        text-align: center;
-    }
-
-    .floating-text:nth-of-type(4) {
-        position: absolute;
-        top: 25%;
-        left: 77%;
-    }
-
-    .floating-text:nth-of-type(5) {
-        position: absolute;
-        top: 45%;
-        left: 78%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(6) {
-        position: absolute;
-        top: 60%;
-        left: 86%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(7) {
-        position: absolute;
-        top: 70%;
-        left: 70%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(8) {
-        position: absolute;
-        top: 83%;
-        left: 60%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(9) {
-        position: absolute;
-        top: 77%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-    }
-
-    .floating-text:nth-of-type(10) {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-    }
-
-    .floating-text:nth-of-type(11) {
-        position: absolute;
-        top: 83%;
-        left: 30%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(12) {
-        position: absolute;
-        top: 70%;
-        left: 18%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(13) {
-        position: absolute;
-        top: 60%;
-        left: 5%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(14) {
-        position: absolute;
-        top: 45%;
-        left: 10%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(15) {
-        position: absolute;
-        top: 30%;
-        left: 5%;
-        display: none;
-    }
-
-    .floating-text:nth-of-type(16) {
-        position: absolute;
-        top: 20%;
-        left: 15%;
-    }
-
-    .floating-text:nth-of-type(17) {
-        position: absolute;
-        top: 12%;
-        left: 30%;
-        display: none;
-    }
 
     nav {
         padding: 15px;
@@ -145,13 +71,30 @@
 /* Мобильные устройства (обычные) */
 @media (max-width: 768px) {
 
-    /* manufactiring */
-    .floating-text:nth-of-type(1) {
+    .hero-title::before {
+        content: "";
         position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        width: 80px;
+        height: 80px;
+        background-image: url('images/Union.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: -30px;
+        left: 0px;
+        z-index: 100;
+    }
+
+    .hero-title::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-image: url('images/Union.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 40px;
+        z-index: 100;
     }
 
     nav {
@@ -166,32 +109,143 @@
         margin-right: 0;
     }
 
+    .moriak-section {
+        padding: 0 15px 30px 15px;
+    }
+
+    footer {
+        padding: 30px 20px;
+        background-color: #E7E8ED;
+    }
+
+    footer::before {
+        background: #E7E8ED;
+    }
+
+    .customer-info-footer {
+        display: grid;
+        grid-template-areas:
+            "logo logo"
+            "contact legal";
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer-container {
+        grid-area: logo;
+    }
+
+    .footer-logo {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .telephone-container {
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .legal-container {
+        grid-area: legal;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .telephone-container p,
+    .legal-container p {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .social-medias {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .social-medias button {
+        font-size: 1.6rem;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--base-blue-color);
+        border-radius: 5px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--base-blue-color);
+    }
+
+
+    .comparison-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comparison-header {
+        display: none;
+    }
+    
+    .comparison-row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .comparison-header h2 {
+        margin-bottom: 10px;
+    }
+    
+    .category {
+        margin-bottom: 10px;
+        text-align: center;
+        border-bottom: none;
+    }
+    
+    .pro-list, 
+    .contra-list {
+        margin-bottom: 20px;
+    }
+
 }
 
 /* Планшеты */
 @media (max-width: 1024px) {
 
-    /* manufactiring */
-    .floating-text:nth-of-type(1) {
+    .container::after {
+        content: "";
         position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        height: 90rem;
+        width: 100%;
+        background-image: url('images/bg-phone.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
+
+    .hero-title::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-image: url('images/Union.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 40px;
+        z-index: 100;
+    }
+
 }
 
 /* Малые десктопы */
 @media (max-width: 1280px) {
 
-    /* manufactiring */
-    .floating-text:nth-of-type(1) {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
 }
 
 /* Стандартные и большие десктопы */
