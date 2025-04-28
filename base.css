@@ -44,7 +44,7 @@ input {
 .heading {
     color: var(--base-black-color);
     font-family: 'NeueMachina-800';
-    font-size: 4.8rem;
+    font-size: clamp(2rem, 8vw, 4.8rem);
     text-align: center;
     margin-bottom: 40px;
 }
