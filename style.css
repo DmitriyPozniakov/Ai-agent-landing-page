@@ -196,17 +196,11 @@ nav::before {
 }
 
 .floating-text {
-    font-size: 1.7rem;
     font-family: 'NeueMachina-300';
-    padding: 10px 27px;
-}
-
-.floating-text {
     position: relative;
-    padding: 15px 20px;
-    display: inline-block;
-    /* Remove the existing border */
+    padding: 10px 15px;
     border: none !important;
+    font-size:  clamp(1rem, 8vw, 1.7rem);
 }
 
 /* Top-left corner */
@@ -570,22 +564,6 @@ nav::before {
 }
 
 
-/* .robot-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-} */
-
-.robot-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #f5f5f5, #e6e6fa, #f5f5f5);
-    z-index: -1;
-}
 
 .stages {
     width: 100%; 
@@ -599,6 +577,7 @@ nav::before {
     position: relative;
     display: inline-block;
     width: auto; 
+    
 }
 
 .robot-container::before {
@@ -616,6 +595,14 @@ nav::before {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.robot-container {
+    width: 100%; 
+    max-width: 35%; 
+    height: auto;
+    object-fit: contain;
+    max-height: 600px;
 }
 
 .robot {
@@ -717,10 +704,7 @@ nav::before {
 footer {
     position: relative;
     background: url('images/background.svg');
-    padding: 120px 60px;
-
-    display: flex;
-    justify-content: space-around;
+    padding: 60px
 }
 
 footer::before {
@@ -745,10 +729,10 @@ footer::before {
 
 .customer-info-footer {
     display: flex;
-    gap: 200px;
+    justify-content: space-around;
 }
 
-.customer-info-footer p {
+.customer-info-footer p:not(.footer-logo) {
     color: var(--base-blue-color);
     font-family: "NeueMachina-500";
     font-size: 2rem;
@@ -771,60 +755,4 @@ footer::before {
 }
 
 
-/* RESPONSIVE RESPONSIVE RESPONSIVE */
-/* Мобильные устройства (маленькие) */
-@media (max-width: 480px) {
-    .floating-text:nth-of-type(1) {
-        position: absolute;
-        top: 32%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 
-    nav {
-        padding: 15px;
-    }
-    .nav-list {
-        display: none;
-    }
-    .logo {
-        margin-right: 0;
-    }
-    .moriak-section {
-        padding: 0 15px 30px 15px;
-    }
-}
-
-/* Мобильные устройства (обычные) */
-@media (max-width: 768px) {
-    nav {
-        padding: 15px;
-    }
-    .nav-list {
-        display: none;
-    }
-    .logo {
-        margin-right: 0;
-    }
-    
-}
-
-/* Планшеты */
-@media (max-width: 1024px) {
-   
-}
-
-/* Малые десктопы */
-@media (max-width: 1280px) {
-   
-}
-
-/* Стандартные и большие десктопы */
-@media (max-width: 1536px) {
-    
-}
-
-/* Очень большие экраны (2K и выше) */
-@media (min-width: 1536px) {
-    
-}

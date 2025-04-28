@@ -1,29 +1,201 @@
+/* RESPONSIVE RESPONSIVE RESPONSIVE */
 /* Мобильные устройства (маленькие) */
 @media (max-width: 480px) {
-    
+
+    /* manufactiring */
+    .floating-text:nth-of-type(1) {
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /* media */
+    .floating-text:nth-of-type(2) {
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        text-align: center;
+    }
+
+    /* logistic */
+    .floating-text:nth-of-type(3) {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .floating-text:nth-of-type(4) {
+        position: absolute;
+        top: 25%;
+        left: 77%;
+    }
+
+    .floating-text:nth-of-type(5) {
+        position: absolute;
+        top: 45%;
+        left: 78%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(6) {
+        position: absolute;
+        top: 60%;
+        left: 86%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(7) {
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(8) {
+        position: absolute;
+        top: 83%;
+        left: 60%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(9) {
+        position: absolute;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .floating-text:nth-of-type(10) {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .floating-text:nth-of-type(11) {
+        position: absolute;
+        top: 83%;
+        left: 30%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(12) {
+        position: absolute;
+        top: 70%;
+        left: 18%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(13) {
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(14) {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(15) {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        display: none;
+    }
+
+    .floating-text:nth-of-type(16) {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+    }
+
+    .floating-text:nth-of-type(17) {
+        position: absolute;
+        top: 12%;
+        left: 30%;
+        display: none;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .moriak-section {
+        padding: 0 15px 30px 15px;
+    }
 }
 
 /* Мобильные устройства (обычные) */
 @media (max-width: 768px) {
-   
+
+    /* manufactiring */
+    .floating-text:nth-of-type(1) {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
 }
 
 /* Планшеты */
 @media (max-width: 1024px) {
-    
+
+    /* manufactiring */
+    .floating-text:nth-of-type(1) {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 /* Малые десктопы */
 @media (max-width: 1280px) {
-   
+
+    /* manufactiring */
+    .floating-text:nth-of-type(1) {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 /* Стандартные и большие десктопы */
-@media (max-width: 1536px) {
-    
-}
+@media (max-width: 1536px) {}
 
 /* Очень большие экраны (2K и выше) */
-@media (min-width: 1536px) {
-    
-}
+@media (min-width: 1536px) {}
