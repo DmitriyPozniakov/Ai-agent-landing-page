@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alsetsoft</title>
+    <title>Agent Detail</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="base.css">
@@ -12,59 +12,12 @@
 </head>
 
 <body>
-    <header>
-        <nav data-aos="fade-up" >
-            <p class="logo">alsetsoft</p>
-            <ul class="nav-list">
-                <li class="nav-item">about us</li>
-                <li class="nav-item">services</li>
-                <li class="nav-item">quality</li>
-                <li class="nav-item">careers</li>
-            </ul>
-            <button class="call-to-action">
-                become a partner
-            </button>
-        </nav>
-        <div class="container">
-            <div class="hero-section">
-                <h1 class="hero-title"><span class="special-title">AI Agent</span> Templates</h1>
-                <p class="hero-article">
-                    Write or tell us what problem you have? And we will help you to find needed AI Agent
-                </p>
-                <div class="input-wrapper">
-                    <input class="hero-input" type="text" placeholder="Search">
-                    <div id="agent-list"></div>
-                </div>
-                <div id="agent-detail"></div>
-            </div>
+    <div class="agent-wrapper">
+        <button>Ai agent</button>
+        <div id="agent-detail">
         </div>
-        <!-- <span class="floating-text black">
-            Manufacturing &
-            Constructions
-        </span>
-        <span class="floating-text blue">
-            Media
-        </span>
-        <span class="floating-text blue">Logistics</span>
-        <span class="floating-text black">Tourism</span>
-        <span class="floating-text black">Marketing &
-            Sales
-        </span>
-        <span class="floating-text black">HR Services</span>
-        <span class="floating-text blue">E-commerce</span>
-        <span class="floating-text blue">Support</span>
-        <span class="floating-text black">Entertainment & Culture</span>
-        <span class="floating-text black">Project Management</span>
-        <span class="floating-text blue">Sport</span>
-        <span class="floating-text blue">Financial Services</span>
-        <span class="floating-text black">Legal Services</span>
-        <span class="floating-text black">Technology &
-            Digital
-        </span>
-        <span class="floating-text black">E-commerce</span>
-        <span class="floating-text blue">Education</span>
-        <span class="floating-text blue">Energy</span> -->
-    </header>
+    </div>
+
     <main>
         <section class="steps-section">
             <div class="step-contaienr">
@@ -77,75 +30,7 @@
                 <img class="stages" src="images/stages.svg" alt="">
                 <div class="robot-container">
                     <img src="images/robot.png" class="robot" alt="Robot">
-                  </div>
-
-
-                <!-- <div class="circle">
-                    <h1 class="development-heading">Software Development Life Stages</h1>
                 </div>
-
-                <div class="stage">
-                    <div class="stage-card primary">
-                        <p class="card-article white">
-                            <span class="arrow"></span>
-                            Problem Identification And Requirement Analysis
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Data Collection and Preparation
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Model Selection and Training
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Model Development
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Model Evaluation and Validation
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Deployment and Integration
-                        </p>
-                    </div>
-                </div>
-
-                <div class="stage">
-                    <div class="stage-card">
-                        <p class="card-article">
-                            <span class="arrow"></span>
-                            Monitoring and Maintenance
-                        </p>
-                    </div>
-                </div> -->
             </div>
         </section>
         <section class="dolor-section">
@@ -323,8 +208,22 @@
             </div>
         </div>
     </footer>
-    <script src="agents.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>
+
+
+<script>
+    const agents = JSON.parse(localStorage.getItem('agents') || '[]');
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+
+    const agent = agents.find(a => a.name === name);
+    const detail = document.getElementById('agent-detail');
+
+    if (agent) {
+        detail.innerHTML = `<h2>${agent.name}</h2><p>${agent.description}</p>`;
+    } else {
+        detail.innerHTML = `<p>Агент не знайдений.</p>`;
+    }
+</script>
