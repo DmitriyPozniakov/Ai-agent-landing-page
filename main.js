@@ -4,21 +4,13 @@ const agentDetail = document.getElementById('agent-detail');
 
 function renderList(query = '') {
     agentList.innerHTML = '';
-    const filtered = window.agents.filter(agent =>
-        agent.name.toLowerCase().includes(query.toLowerCase()) ||
-        agent.description.toLowerCase().includes(query.toLowerCase())
-    );
-
-    // filtered.forEach(agent => {
-    //     const div = document.createElement('div');
-    //     div.className = 'agent';
-    //     div.innerHTML = `
-    //     <strong>${agent.name}</strong><br/>
-    //     ${agent.description}<br/>
-    //     <a href="agent.html?name=${encodeURIComponent(agent.name)}">Переглянути</a>
-    //   `;
-    //     agentList.appendChild(div);
-    // });
+    const filtered = window.agents.filter(agent => {
+        const nameMatch = agent.name.toLowerCase().includes(query.toLowerCase());
+        const workflowMatch = [1, 2, 3].some(i => 
+            (agent[`workflow_${i}`] || '').toLowerCase().includes(query.toLowerCase())
+        );
+        return nameMatch || workflowMatch;
+    });
 
     if (searchInput.value.trim() === '') {
         agentList.style.display = 'none';
@@ -47,7 +39,6 @@ function renderList(query = '') {
         `;
         agentList.appendChild(div);
     });
-    
 }
 
 searchInput.addEventListener('input', () => {

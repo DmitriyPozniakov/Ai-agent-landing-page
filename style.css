@@ -390,6 +390,86 @@ nav {
     padding: 60px 0;
 }
 
+.all-agents {
+    padding: 30px;
+}
+
+.agents {
+    border-radius: 20px;
+    background: linear-gradient(156deg, #DBDBEB 40.9%, #B8C0E9 131.96%);
+    box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+}
+
+.agent-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 100%; 
+    max-width: 32rem;
+    min-height: 53rem;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+.agent-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+
+.agent-card-link:hover {
+    transform: translateY(-10px); 
+}
+
+.heading-agents {
+    color: #2718A9;
+    text-align: center;
+    font-family: "NeueMachina-800";
+    font-size: clamp(2rem, 8vw, 4.8rem);
+    margin-bottom: 15px;
+}
+
+.text-agents {
+    color: #1D1D1D;
+    text-align: center;
+    font-family: 'Formular-400';
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
+    margin-bottom: 15px;
+}
+
+.agent-card h2 {
+    color: #fff;
+    font-family: 'Formular-700';
+    font-size: 2.4rem;
+}
+
+.agent-card .workflows {
+    color: #fff;
+    font-family: 'Formular-700';
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.agent-card .workflows-item {
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(20px);
+    padding: 10px 20px;
+    color: #FFF;
+    font-family: 'Formular-700';
+    font-size: 1.6rem;
+}
+
 .dolor-section {
     padding: 60px 30px;
 }
@@ -415,7 +495,6 @@ nav {
 
     100% {
         transform: translateX(calc(-120px * 5 - 15px * 5));
-        /* Прокрутка на всю ширину всех элементов + gap между ними */
     }
 }
 
@@ -750,33 +829,9 @@ footer::before {
     font-size: 2rem;
 }
 
-#agent-detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.agent-wrapper {
-    position: relative;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #E7E8ED;
-}
 
-.agent-wrapper button {
-    color: #1D1D1D;
-    font-family: "NeueMachina-500";
-    font-size: clamp(2rem, 8vw, 3rem);
-    border: 2px solid var(--base-blue-color);
-    border-radius: 15px;
-    padding: 5px 10px;
-}
+
 
 .input-wrapper {
     position: relative;
@@ -789,7 +844,7 @@ footer::before {
 
 #agent-list {
     position: absolute;
-    top: 90%; 
+    top: 90%;
     left: 0;
     width: 100%;
     background: white;
@@ -797,7 +852,7 @@ footer::before {
     z-index: 1000;
     max-height: 300px;
     overflow-y: auto;
-    border:none;
+    border: none;
     padding: 15px 25px;
     border-radius: 20px;
 
@@ -805,21 +860,6 @@ footer::before {
 
 #agent-list::-webkit-scrollbar {
     display: none;
-}
-
-
-#agent-detail h2 {
-    color: var(--base-black-color);
-    font-size: clamp(2rem, 8vw, 4.8rem);
-    font-family: 'NeueMachina-800';
-    text-align: center;
-}
-
-#agent-detail p {
-    font-family: 'Formular-300';
-    font-size: clamp(1rem, 8vw, 1.9rem);
-    color: var(--base-black-color);
-    text-align: center;
 }
 
 .agent a {

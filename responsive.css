@@ -1,6 +1,8 @@
 /* RESPONSIVE RESPONSIVE RESPONSIVE */
 /* Мобильные устройства (маленькие) */
 @media (min-width: 240px) and (max-width: 480px) {
+   
+
     .hero-section {
         display: flex;
         justify-content: center;
@@ -23,6 +25,11 @@
 }
 
 @media (max-width: 480px) {
+    
+
+    .agents {
+        padding: 0;
+    }
 
     .hero-title::before {
         content: "";
@@ -70,6 +77,8 @@
 
 /* Мобильные устройства (обычные) */
 @media (max-width: 768px) {
+
+    
 
     .hero-title::before {
         content: "";
