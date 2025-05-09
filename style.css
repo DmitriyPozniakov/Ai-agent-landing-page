@@ -27,7 +27,7 @@ header {
     position: relative;
     overflow: hidden;
 }
-
+/* 
 .container::after {
     content: "";
     position: absolute;
@@ -37,7 +37,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 /* header::after {
     content: "";
@@ -215,6 +215,8 @@ nav {
     padding: 10px 15px;
     border: none !important;
     font-size: clamp(1rem, 8vw, 1.7rem);
+    max-width: 200px;
+    text-align: center;
 }
 
 /* Top-left corner */
